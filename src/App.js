@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import Navigation from './components/Navigation';
+import Slider from './components/Slider';
+import Public1 from './components/Public1'
+import Footer from './components/Footer';
+import Index from './components/Index';
+import Rutinas from './components/Rutinas';
+import ImageParallax from './components/ImageParallax';
+import Table from './components/Table';
+import Interactive from './components/Interactive'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation />
+      <Slider />
+      <Public1 />
+      <ImageParallax />
+      <Table />
+      
+        <Route path="/" exact  component={Index} />
+        <Route path="/Rutinas" component={Rutinas} />
+
+        <Interactive />
+
+      <Footer />
+    </Router>
   );
 }
 

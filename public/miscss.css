@@ -1,0 +1,76 @@
+body {
+    background-color: #000000
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 7px;
+
+}
+
+.sha{
+    text-shadow: 5px 5px 5px black;
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 40vh;
+}
+
+:root{
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --youtube: #ff0000;
+}
+
+.redes-contenedor{
+    display: flex;
+    height: 38vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes-contenedor ul li{
+    display: inline-block;
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.redes-contenedor ul li a{
+    display: block;
+    padding: 0 10px;
+    background: #7d7f7d;
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+
+.redes-contenedor ul:hover a{
+    filter: blur(2px);
+}
+
+.redes-contenedor ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .4);
+    filter: none;
+}
+
+.redes-contenedor ul li .facebook:hover{
+    background: var(--facebook);
+}
+
+.redes-contenedor ul li .instagram:hover{
+    background: var(--instagram);
+}
+
+.redes-contenedor ul li .youtube:hover{
+    background: var(--youtube);
+}
